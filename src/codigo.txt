@@ -1,0 +1,97 @@
+import math
+import os as osmod
+from random import randint, choice
+from collections import defaultdict as dd
+import unused_mod
+from json import loads as json_loads
+import whatever
+
+# Useful variable and use
+used_var = 1
+print(used_var)  # usage of used_var
+
+# Several unused variables
+unused_var1 = 100
+unused_var2 = 'not used'
+_temp_unused = None
+
+# Line-level inefficiencies (examples repeated)
+x = x + 1
+x = x + 1  # repeated intentionally
+y = y - 2
+y = y - 2
+z = z * 3
+w = w / 4
+m = m % 5
+pwr = pwr ** 2
+redund = redund
+add_zero = add_zero + 0
+sub_zero = sub_zero - 0
+mul_one = mul_one * 1
+div_one = div_one / 1
+mod_one = mod_one % 1
+pow_one = pow_one ** 1
+zero_plus = 0 + zero_plus
+zero_minus = 0 - zero_minus
+one_mul = 1 * one_mul
+one_div = 1 / one_div
+one_mod = 1 % one_mod
+one_pow = 1 ** one_pow
+
+# Condition simplifications
+if (flag == True):
+    pass
+if (flag2 == False):
+    pass
+while (running == True):
+    pass
+while (done == False):
+    pass
+
+# Containers, some used some unused
+my_list = [1, 2, 3]
+my_list2 = [4, 5, 6]  # used below
+my_dict = {'k': 1}
+my_dict2 = {'k': 1}
+
+print(my_list2[0])
+
+# Classes and functions
+class UsedClass:
+    def greet(self):
+        return 'hi'
+
+class UnusedClass1:
+    pass
+
+class UnusedClass2:
+    pass
+
+def used_function(x):
+    return x * 2
+
+def unused_function_a():
+    return 0
+
+def unused_function_b():
+    return 1
+
+print(used_function(5))
+
+for i in range(2):
+    pass
+
+# Several imports: some used, some unused, some aliased
+val = math.pi  # math used
+joined = osmod.path.join('a', 'b')  # os alias used
+rand = randint(1, 10)  # randint used
+# `choice` is imported but not used (unused)
+# `json_loads` imported but not used (unused)
+
+# Names in comments and strings that should not count as usage
+commented = 'unused_mod is mentioned in this string unused_mod'
+# the word `whatever` appears in a comment but should not count as usage
+
+# End of file - keep some additional unused imports
+import another_unused
+from math import factorial as fact_alias
